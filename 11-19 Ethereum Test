@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity >= 0.8.0;
+
+contract Test {
+    string private msg1;
+    uint256 private num1;
+
+    constructor(string memory mesg, uint256 num) {
+        msg1 = mesg;
+        num1 = num;
+    }
+
+    function showMsg() public view returns(string memory) {
+        return msg1;
+    }
+
+    function showNum() public view returns(uint256) {
+        return num1;
+    }
+
+    function updateMsg(string memory newMsg) public {
+        msg1 = newMsg;
+    }
+
+    function updateNum(uint256 newNum) public {
+        num1 = newNum;
+    }
+}
